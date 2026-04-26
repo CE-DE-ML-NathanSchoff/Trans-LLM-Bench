@@ -65,3 +65,4 @@ Intermediate text outputs for every language hop.
 Real-time metrics (LaBSE, TTR, Character Density, COMET-QE) for each node.
 
 A final qualitative LLM-Judge analysis of the back-translated English result.
+git clone https://github.com/CE-DE-ML-NathanSchoff/Trans-LLM-Bench.git

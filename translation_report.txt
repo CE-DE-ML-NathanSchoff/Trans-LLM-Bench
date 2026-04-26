@@ -1,73 +1,318 @@
 === MULTILINGUAL SEMANTIC DRIFT REPORT ===
-Generated on: 2026-04-25 23:16:58
+Generated: 2026-04-26 16:02:46
+
+##################################################
+DATASET: TECHNICAL DOCUMENT
+##################################################
 
 [ORIGINAL SOURCE TEXT]
-If you can keep your head when all about you
-    Are losing theirs and blaming it on you,
-If you can trust yourself when all men doubt you,
-    But make allowance for their doubting too;
+All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
 
-=== INTERMEDIATE HOPS & DIAGNOSTIC METRICS ===
+========================================
+  PROVIDER: OPENAI
+========================================
+
+>> Hop 1: English (English) -> Germanic (German)
+LaBSE: 0.9099 | Fidelity: 0.9947 | BLEU: 74.48 | COMET: 0.6352 | TTR: 0.8462
+------------------------------
+>> Hop 2: Germanic (German) -> Romantic (French)
+LaBSE: 0.8879 | Fidelity: 0.9515 | BLEU: 50.77 | COMET: 0.5295 | TTR: 0.7273
+------------------------------
+>> Hop 3: Romantic (French) -> Slavic (Czech)
+LaBSE: 0.8890 | Fidelity: 0.9485 | BLEU: 18.43 | COMET: 0.7404 | TTR: 0.8000
+------------------------------
+>> Hop 4: Slavic (Czech) -> Western Asian (Hebrew)
+LaBSE: 0.8706 | Fidelity: 0.8423 | BLEU: 2.21 | COMET: 0.1877 | TTR: 0.9412
+------------------------------
+>> Hop 5: Western Asian (Hebrew) -> Eastern Asian (Korean)
+LaBSE: 0.8565 | Fidelity: 0.8724 | BLEU: 12.32 | COMET: 0.6541 | TTR: 1.0000
+------------------------------
+>> Hop 6: Eastern Asian (Korean) -> English (English)
+LaBSE: 0.9441 | Fidelity: 0.9441 | BLEU: 60.60 | COMET: 0.5607 | TTR: 0.8148
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.8930 | Avg COMET: 0.5513
+
+=== FINAL AUDIT ===
+Judge Score: 85.0%
+Analysis: The back-translation retains the core message of the original text but exhibits some semantic drift and slight shifts in tone. The phrase 'human beings' is replaced with 'people', which is less formal and may lose some of the philosophical weight of the original. The phrase 'act towards one another' is changed to 'meet each other', which alters the intended meaning from a call to action to a more passive interaction. This shift could imply a less active engagement in brotherhood. Overall, while the essence remains, the nuances of action and formality are diminished.
+
+========================================
+  PROVIDER: GOOGLE_GEMINI
+========================================
+
+>> Hop 1: English (English) -> Germanic (German)
+LaBSE: 0.9120 | Fidelity: 0.9559 | BLEU: 21.90 | COMET: 0.5430 | TTR: 0.8571
+------------------------------
+>> Hop 2: Germanic (German) -> Romantic (French)
+LaBSE: 0.9255 | Fidelity: 0.9946 | BLEU: 57.79 | COMET: 0.2114 | TTR: 0.8485
+------------------------------
+>> Hop 3: Romantic (French) -> Slavic (Russian)
+LaBSE: 0.9048 | Fidelity: 0.9721 | BLEU: 30.51 | COMET: 0.2388 | TTR: 0.8333
+------------------------------
+>> Hop 4: Slavic (Russian) -> Western Asian (Arabic)
+LaBSE: 0.9285 | Fidelity: 0.9008 | BLEU: 2.16 | COMET: 0.6032 | TTR: 0.9167
+------------------------------
+>> Hop 5: Western Asian (Arabic) -> Eastern Asian (Korean)
+LaBSE: 0.8912 | Fidelity: 0.9228 | BLEU: 1.92 | COMET: -0.2673 | TTR: 0.8148
+------------------------------
+>> Hop 6: Eastern Asian (Korean) -> English (English)
+LaBSE: 0.9598 | Fidelity: 0.9598 | BLEU: 8.78 | COMET: -0.3916 | TTR: 0.7500
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.9203 | Avg COMET: 0.1563
+
+=== FINAL AUDIT ===
+Judge Score: 30.0%
+Analysis: The back-translation exhibits significant semantic drift and loss of nuance. The phrase 'All human beings are born free and equal in dignity and rights' is altered to 'All human's beings they born free and and equal dignity and rights-in,' which introduces grammatical errors and changes the structure, leading to confusion. The original intent of 'endowed with reason and conscience' is poorly translated to 'equipped reason and conscience-with,' losing the nuance of being 'endowed' which implies a natural gift rather than just being equipped. Additionally, the phrase 'should act towards one another in a spirit of brotherhood' is transformed into 'they must do acting each other towards brotherhood's spirit in,' which not only distorts the meaning but also shifts the tone from a moral imperative to a more awkward phrasing. Overall, the back-translation lacks clarity and coherence, significantly deviating from the original message.
+
+========================================
+  PROVIDER: ANTHROPIC_CLAUDE
+========================================
 
 >> Hop 1: English (English) -> Germanic (Swedish)
-Text: Om du kan behålla ditt lugn när alla omkring dig
-    Tappar sitt och skyller på dig,
-Om du kan lita ...
-LaBSE Global Retention: 0.8417
-Verified Historical Fidelity: [N/A]
-Type-Token Ratio (Morphology): 0.7143
-----------------------------------------
+LaBSE: 0.9200 | Fidelity: 0.9709 | BLEU: 60.12 | COMET: 0.7289 | TTR: 0.8519
+------------------------------
+>> Hop 2: Germanic (Swedish) -> Romantic (Italian)
+LaBSE: 0.9406 | Fidelity: 0.9964 | BLEU: 68.14 | COMET: 0.7016 | TTR: 0.7812
+------------------------------
+>> Hop 3: Romantic (Italian) -> Slavic (Polish)
+LaBSE: 0.9236 | Fidelity: 0.9748 | BLEU: 52.06 | COMET: 0.7915 | TTR: 0.8462
+------------------------------
+>> Hop 4: Slavic (Polish) -> Western Asian (Arabic)
+LaBSE: 0.9228 | Fidelity: 0.9536 | BLEU: 14.73 | COMET: 0.5256 | TTR: 0.9524
+------------------------------
+>> Hop 5: Western Asian (Arabic) -> Eastern Asian (Mandarin Chinese)
+LaBSE: 0.8863 | Fidelity: 0.9493 | BLEU: 0.00 | COMET: 0.5360 | TTR: 1.0000
+------------------------------
+>> Hop 6: Eastern Asian (Mandarin Chinese) -> English (English)
+LaBSE: 0.9773 | Fidelity: 0.9773 | BLEU: 65.73 | COMET: 0.6598 | TTR: 0.8519
+------------------------------
 
->> Hop 2: Germanic (Swedish) -> Romantic (Spanish)
-Text: Si puedes mantener la calma cuando todos a tu alrededor
-    Pierden la suya y te culpan a ti,
-Si pue...
-LaBSE Global Retention: 0.8907
-Verified Historical Fidelity: 0.9392
-Type-Token Ratio (Morphology): 0.7500
-----------------------------------------
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.9284 | Avg COMET: 0.6572
 
+=== FINAL AUDIT ===
+Judge Score: 90.0%
+Analysis: The back-translation retains the core message of the original text, emphasizing the freedom, equality, and dignity of all human beings. However, the phrase 'human beings' is replaced with 'people', which, while still accurate, may slightly diminish the philosophical weight of the term. The phrase 'act towards one another' is changed to 'treat one another', which is a more casual expression and may lose some of the original's formal tone. Overall, the meaning is preserved, but there are subtle shifts in tone and nuance.
+
+========================================
+  PROVIDER: DEEPSEEK
+========================================
+
+>> Hop 1: English (English) -> Germanic (German)
+LaBSE: 0.9072 | Fidelity: 1.0000 | BLEU: 100.00 | COMET: 0.5914 | TTR: 0.8462
+------------------------------
+>> Hop 2: Germanic (German) -> Romantic (Spanish)
+LaBSE: 0.9280 | Fidelity: 0.9784 | BLEU: 56.66 | COMET: 0.6757 | TTR: 0.8000
+------------------------------
 >> Hop 3: Romantic (Spanish) -> Slavic (Czech)
-Text: Pokud můžeš zachovat klid, když všichni kolem tebe
-    Ztrácejí ten svůj a obviňují tě,
-Pokud můžeš ...
-LaBSE Global Retention: 0.8774
-Verified Historical Fidelity: 0.6623
-Type-Token Ratio (Morphology): 0.8710
-----------------------------------------
-
->> Hop 4: Slavic (Czech) -> Western Asian (Arabic)
-Text: إذا كنت تستطيع الحفاظ على هدوئك عندما يفقد الجميع من حولك هدوءهم ويتهمونك،  
-إذا كنت تستطيع أن تؤمن ...
-LaBSE Global Retention: 0.8505
-Verified Historical Fidelity: 0.8818
-Type-Token Ratio (Morphology): 0.8333
-----------------------------------------
-
->> Hop 5: Western Asian (Arabic) -> Eastern Asian (Korean)
-Text: 당신이 주변의 모든 사람들이 평정을 잃고 당신을 비난할 때에도 침착함을 유지할 수 있다면,  
-모두가 당신을 의심할 때에도 스스로를 믿을 수 있다면,  
-그러나 그들의 의심도 고려...
-LaBSE Global Retention: 0.7975
-Verified Historical Fidelity: [N/A]
-Type-Token Ratio (Morphology): 0.7778
-Character-to-Meaning Density: 2.9630
-----------------------------------------
-
+LaBSE: 0.9287 | Fidelity: 0.9880 | BLEU: 44.87 | COMET: 0.7647 | TTR: 0.8148
+------------------------------
+>> Hop 4: Slavic (Czech) -> Western Asian (Hebrew)
+LaBSE: 0.9083 | Fidelity: 0.9250 | BLEU: 14.51 | COMET: 0.5601 | TTR: 1.0000
+------------------------------
+>> Hop 5: Western Asian (Hebrew) -> Eastern Asian (Korean)
+LaBSE: 0.8988 | Fidelity: 0.9544 | BLEU: 17.64 | COMET: 0.7020 | TTR: 1.0000
+------------------------------
 >> Hop 6: Eastern Asian (Korean) -> English (English)
-Text: If you can remain calm even when everyone around you loses their composure and blames you,  
-if you ...
-LaBSE Global Retention: 0.8535
-Verified Historical Fidelity: [N/A]
-Type-Token Ratio (Morphology): 0.6452
-----------------------------------------
+LaBSE: 0.9955 | Fidelity: 0.9955 | BLEU: 76.98 | COMET: 0.6993 | TTR: 0.8276
+------------------------------
 
-=== FINAL BACK-TRANSLATION (ENGLISH) ===
-If you can remain calm even when everyone around you loses their composure and blames you,  
-if you can trust yourself even when everyone doubts you,  
-but also consider their doubts;
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.9278 | Avg COMET: 0.6655
 
-=== LLM JUDGE EVALUATION ===
-Retention Score: 85.0%
-Analysis: The back-translated text retains the overall meaning and tone of the original, but some nuances are lost, particularly the emphasis on maintaining one's head and the specific phrasing of 'make allowance for their doubting.'
-Omissions: the phrase 'keep your head', the specific wording 'make allowance for their doubting'
+=== FINAL AUDIT ===
+Judge Score: 95.0%
+Analysis: The back-translation retains the core meaning of the original text, with only minor changes in wording. The phrase 'human beings' is simplified to 'humans', which does not significantly alter the meaning but may slightly affect the tone by making it less formal. The phrase 'should act towards' is changed to 'should act toward', which is a regional variation in English but does not impact the overall meaning. Overall, the essence of the original message is preserved, but the slight shift in formality and regional language may affect the tone for some audiences.
+
+========================================
+  PROVIDER: MOONSHOT_KIMI
+========================================
+
+>> Hop 1: English (English) -> Germanic (Dutch)
+LaBSE: 0.9095 | Fidelity: 0.9643 | BLEU: 23.80 | COMET: 0.5370 | TTR: 0.8571
+------------------------------
+>> Hop 2: Germanic (Dutch) -> Romantic (Italian)
+LaBSE: 0.9427 | Fidelity: 0.9807 | BLEU: 18.93 | COMET: 0.6662 | TTR: 0.7667
+------------------------------
+>> Hop 3: Romantic (Italian) -> Slavic (Polish)
+LaBSE: 0.9070 | Fidelity: 0.9510 | BLEU: 5.34 | COMET: 0.5144 | TTR: 0.8696
+------------------------------
+>> Hop 4: Slavic (Polish) -> Western Asian (Arabic)
+LaBSE: 0.8927 | Fidelity: 0.8923 | BLEU: 13.24 | COMET: 0.2117 | TTR: 0.9524
+------------------------------
+>> Hop 5: Western Asian (Arabic) -> Eastern Asian (Mandarin Chinese)
+LaBSE: 0.8927 | Fidelity: 0.8297 | BLEU: 0.00 | COMET: 0.2117 | TTR: 0.9524
+------------------------------
+>> Hop 6: Eastern Asian (Mandarin Chinese) -> English (English)
+LaBSE: 0.9920 | Fidelity: 0.9920 | BLEU: 91.02 | COMET: 0.6846 | TTR: 0.8276
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.9228 | Avg COMET: 0.4709
+
+=== FINAL AUDIT ===
+Judge Score: 90.0%
+Analysis: The back-translation retains the core meaning of the original text, but there is a slight semantic drift in the choice of the word 'individuals' instead of 'human beings'. While 'individuals' is a synonym, it lacks the broader humanistic connotation that 'human beings' carries, which emphasizes the shared humanity and collective experience. Additionally, the tone remains formal and respectful in both versions, but the shift from 'human beings' to 'individuals' may subtly alter the emphasis on community and shared identity.
+
+
+##################################################
+DATASET: METAPHORICAL POEM
+##################################################
+
+[ORIGINAL SOURCE TEXT]
+The ocean speaks in whispers to the shore, A salty breath that rustles through the sand. It holds the ancient secrets of the deep, A world untouched by any human hand.
+
+========================================
+  PROVIDER: OPENAI
+========================================
+
+>> Hop 1: English (English) -> Germanic (Swedish)
+LaBSE: 0.8906 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.2115 | TTR: 0.9259
+------------------------------
+>> Hop 2: Germanic (Swedish) -> Romantic (French)
+LaBSE: 0.9059 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.3002 | TTR: 0.9355
+------------------------------
+>> Hop 3: Romantic (French) -> Slavic (Polish)
+LaBSE: 0.8506 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1093 | TTR: 0.9524
+------------------------------
+>> Hop 4: Slavic (Polish) -> Western Asian (Farsi)
+LaBSE: 0.8491 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.2468 | TTR: 0.9118
+------------------------------
+>> Hop 5: Western Asian (Farsi) -> Eastern Asian (Mandarin Chinese)
+LaBSE: 0.8839 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1515 | TTR: 1.0000
+------------------------------
+>> Hop 6: Eastern Asian (Mandarin Chinese) -> English (English)
+LaBSE: 0.9320 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.1386 | TTR: 0.8333
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.8854 | Avg COMET: -0.0763
+
+=== FINAL AUDIT ===
+Judge Score: 85.0%
+Analysis: The back-translation retains much of the original meaning but introduces subtle shifts in wording and tone. The phrase 'speaks in whispers' is changed to 'converses with whispers,' which alters the tone slightly from a poetic expression to a more literal interpretation. The phrase 'a salty breath that rustles through the sand' is modified to 'the salty breath breaks from the sand,' which loses the imagery of rustling and suggests a more abrupt action. The phrase 'holds the ancient secrets of the deep' is transformed into 'the secrets of the ancient depths are borne,' which changes the active voice to a passive construction, potentially diminishing the sense of agency and mystery in the original. Overall, while the core ideas remain intact, the nuances of poetic expression and imagery are somewhat diminished.
+
+========================================
+  PROVIDER: GOOGLE_GEMINI
+========================================
+
+>> Hop 1: English (English) -> Germanic (German)
+LaBSE: 0.9055 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.0815 | TTR: 0.9667
+------------------------------
+>> Hop 2: Germanic (German) -> Romantic (Italian)
+LaBSE: 0.9247 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.2092 | TTR: 0.9333
+------------------------------
+>> Hop 3: Romantic (Italian) -> Slavic (Czech)
+LaBSE: 0.9148 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1305 | TTR: 1.0000
+------------------------------
+>> Hop 4: Slavic (Czech) -> Western Asian (Hebrew)
+LaBSE: 0.8939 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.6778 | TTR: 1.0000
+------------------------------
+>> Hop 5: Western Asian (Hebrew) -> Eastern Asian (Korean)
+LaBSE: 0.8902 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.4951 | TTR: 0.9524
+------------------------------
+>> Hop 6: Eastern Asian (Korean) -> English (English)
+LaBSE: 0.9403 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.4529 | TTR: 0.9259
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.9116 | Avg COMET: -0.3140
+
+=== FINAL AUDIT ===
+Judge Score: 60.0%
+Analysis: The back-translation shows significant semantic drift and loss of nuance compared to the original source. The phrase 'speaks in whispers' has been simplified to 'speaks with a whisper,' which loses the poetic quality of the original. The term 'shore' has been changed to 'coast,' which, while similar, can imply a different geographical context. The phrase 'rustles through the sand' has been altered to 'hisses sand through,' which introduces a harsher sound and changes the imagery from a gentle rustling to a more aggressive hissing. The phrase 'ancient secrets of the deep' has been translated to 'old secrets in the abyss,' which shifts the meaning slightly, as 'abyss' suggests a more foreboding and less mysterious depth than 'the deep.' Finally, the line 'A world untouched by any human hand' has been changed to 'World untouched all human's hand,' which is grammatically awkward and loses the emphasis on the absence of human influence. Overall, the tone has shifted from a serene and mystical quality to a more abrupt and less fluid expression.
+
+========================================
+  PROVIDER: ANTHROPIC_CLAUDE
+========================================
+
+>> Hop 1: English (English) -> Germanic (Dutch)
+LaBSE: 0.9163 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.2709 | TTR: 0.8065
+------------------------------
+>> Hop 2: Germanic (Dutch) -> Romantic (French)
+LaBSE: 0.9327 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1950 | TTR: 0.8824
+------------------------------
+>> Hop 3: Romantic (French) -> Slavic (Czech)
+LaBSE: 0.9208 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.0164 | TTR: 1.0000
+------------------------------
+>> Hop 4: Slavic (Czech) -> Western Asian (Farsi)
+LaBSE: 0.8656 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1366 | TTR: 0.8788
+------------------------------
+>> Hop 5: Western Asian (Farsi) -> Eastern Asian (Mandarin Chinese)
+LaBSE: 0.9224 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.2218 | TTR: 1.0000
+------------------------------
+>> Hop 6: Eastern Asian (Mandarin Chinese) -> English (English)
+LaBSE: 0.9482 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.3184 | TTR: 0.8000
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.9177 | Avg COMET: 0.0827
+
+=== FINAL AUDIT ===
+Judge Score: 85.0%
+Analysis: The back-translation retains much of the original meaning but introduces slight shifts in tone and nuance. The phrase 'A salty breath' is altered to 'A breath of salt and bitterness,' which adds a negative connotation ('bitterness') that was not present in the original. Additionally, 'through the sand' is changed to 'between the grains of sand,' which, while still accurate, alters the imagery slightly. The overall structure and meaning remain intact, but the emotional resonance is somewhat diminished due to these changes.
+
+========================================
+  PROVIDER: DEEPSEEK
+========================================
+
+>> Hop 1: English (English) -> Germanic (Swedish)
+LaBSE: 0.8850 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.0092 | TTR: 0.9630
+------------------------------
+>> Hop 2: Germanic (Swedish) -> Romantic (French)
+LaBSE: 0.9043 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1758 | TTR: 0.9667
+------------------------------
+>> Hop 3: Romantic (French) -> Slavic (Russian)
+LaBSE: 0.8746 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.1677 | TTR: 1.0000
+------------------------------
+>> Hop 4: Slavic (Russian) -> Western Asian (Farsi)
+LaBSE: 0.8749 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.1846 | TTR: 0.9062
+------------------------------
+>> Hop 5: Western Asian (Farsi) -> Eastern Asian (Japanese)
+LaBSE: 0.8878 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.0463 | TTR: 1.0000
+------------------------------
+>> Hop 6: Eastern Asian (Japanese) -> English (English)
+LaBSE: 0.9322 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.0889 | TTR: 0.8621
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.8931 | Avg COMET: -0.0235
+
+=== FINAL AUDIT ===
+Judge Score: 80.0%
+Analysis: The back-translation retains much of the original meaning but introduces some shifts in tone and nuance. The phrase 'The ocean speaks in whispers' is simplified to 'The sea whispers,' which loses the poetic quality of 'speaks in whispers.' The term 'salty breath' is altered to 'rustling its salty breath,' which changes the structure and may imply a more active role of the sea rather than a passive one. The phrase 'a world untouched by any human hand' is changed to 'a world that no human hand has reached,' which slightly shifts the emphasis from the idea of being untouched to merely being unreachable. Overall, while the core imagery remains, the lyrical quality and some nuances are diminished.
+
+========================================
+  PROVIDER: MOONSHOT_KIMI
+========================================
+
+>> Hop 1: English (English) -> Germanic (Dutch)
+LaBSE: 0.8864 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: 0.1685 | TTR: 0.8000
+------------------------------
+>> Hop 2: Germanic (Dutch) -> Romantic (Spanish)
+LaBSE: 0.9118 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.2830 | TTR: 0.9655
+------------------------------
+>> Hop 3: Romantic (Spanish) -> Slavic (Russian)
+LaBSE: 0.8503 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.6037 | TTR: 1.0000
+------------------------------
+>> Hop 4: Slavic (Russian) -> Western Asian (Farsi)
+LaBSE: 0.7924 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.5957 | TTR: 0.8889
+------------------------------
+>> Hop 5: Western Asian (Farsi) -> Eastern Asian (Mandarin Chinese)
+LaBSE: 0.7924 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.5957 | TTR: 0.8889
+------------------------------
+>> Hop 6: Eastern Asian (Mandarin Chinese) -> English (English)
+LaBSE: 0.7586 | Fidelity: 0.0000 | BLEU: 0.00 | COMET: -0.5529 | TTR: 0.8125
+------------------------------
+
+[MODEL CHAIN AVERAGES]
+Avg LaBSE: 0.8320 | Avg COMET: -0.4104
+
+=== FINAL AUDIT ===
+Judge Score: 40.0%
+Analysis: The back-translation diverges significantly from the original text in both meaning and tone. The phrase 'speaks in whispers' is transformed into 'touches the coast,' which loses the personification and the gentle, intimate quality of the ocean's communication. The 'salty breath' is altered to 'salty influence,' which lacks the vivid imagery and sensory experience of the original. The phrase 'rustles through the sand' is completely omitted, resulting in a loss of nuance regarding the interaction between the ocean and the shore. The original's 'ancient secrets of the deep' is changed to 'owner of the ancient depths,' which shifts the focus from the ocean as a keeper of secrets to a possessive entity, altering the tone from mysterious to authoritative. Finally, 'a world untouched by any human hand' is rephrased to 'a world that no human hand can access,' which, while similar, changes the implication from a sense of reverence for untouched nature to a more clinical observation of inaccessibility. Overall, the back-translation lacks the poetic quality and depth of the original, resulting in a significant semantic drift.
+
